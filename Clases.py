@@ -1,13 +1,11 @@
 import pygame
-import csv
-import json
 import random
 import math
 
 class General(pygame.sprite.Sprite): #clase general
     allsprites = pygame.sprite.Group()
 
-    def __init__(self, x, y, width, height, image_string):
+    def __init__(self, x, y, width, height, image_string): #construye instancia con posicion x, y ancho y alto e imagen
         pygame.sprite.Sprite.__init__ (self)
         General.allsprites.add(self)
         self.carga_imagen = pygame.image.load(image_string)
@@ -53,15 +51,16 @@ class Carros(General):
         Carros.lista.add(self)
         self.vel = vel
 
-    def move(self):
-        pass
+    def check_collide(self):
+        if self.rect.collide_rect(Proyectil.lista())
 
 
 class Jugador(Carros):
     lista = pygame.sprite.Group()
+
     def __init__(self, x, y, width, height, image_string, vel):
         Carros.__init__(self, x, y, width, height, image_string, vel)
-        Carros.lista.add(self)
+        Jugador.lista.add(self)
 
     def move(self):
         keys = pygame.key.get_pressed()
@@ -74,13 +73,12 @@ class Jugador(Carros):
         if keys[pygame.K_UP] or keys[pygame.K_w]:
             self.rect.y -= self.vel
 
-
 class Enemigo(Carros):
     lista = pygame.sprite.Group()
 
     def __init__(self, x, y, width, height, image_string, vel):
         Carros.__init__(self, x, y, width, height, image_string, vel)
-        Carros.lista.add(self)
+        Enemigo.lista.add(self)
         self.velx = 0
         self.vely = 0
 
@@ -105,4 +103,18 @@ class Enemigo(Carros):
         self.rect.y += self.vely
 
 
+class Proyectil(General):
+
+    lista = pygame.sprite.Group()
+
+    def __init__(self, x, y, width, height, image_string, vel):
+        General.__init__ (self, x, y, width, height, image_string)
+        Proyectil.lista.add()
+        self.vel = vel
+
+    def move(self):
+        if not self.rect.collide_rect(Carros.lista):
+            self.rect.y += self.vel
+        else:
+            self.destroy(Proyectil)
 
