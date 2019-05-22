@@ -106,7 +106,20 @@ class Jugador(Carros):
             self.direc = 3
             if keys[pygame.K_UP] or keys[pygame.K_w]:
                 self.rect.y -= self.vel
-
+    def disparar(self):
+        if self.direc == 0:
+            vel_disparo = [0,-self.vel*2]
+            pos == [self.rect.centerx+self.width/2, self.rect.centery+10]
+        elif self.direc == 1:
+            vel_disparo = [self.vel*2,0]
+            pos = [self.rect.centerx+self.width+10, self.rect.centery/2]
+        elif self.direc == 2:
+            vel_disparo = [-self.vel*2,0]
+            pos = [self.centerx-10, self.rect.centery/2]
+        else:
+            vel_disparo = [0,self.vel*2]
+            pos = 
+        
 
 class Enemigo(Carros):
     lista = pygame.sprite.Group()
@@ -144,14 +157,16 @@ class Proyectil(General):
 
     lista = pygame.sprite.Group()
 
-    def __init__(self, x, y, width, height, image_string):
+    def __init__(self, x, y, width, height, image_string, [velx, vely]):
         General.__init__ (self, x, y, width, height, image_string)
         Proyectil.lista.add()
-        self.vel = 15
+        self.velx = velx
+        self.vely = vely
 
     def move(self):
         if not self.rect.collide_rect(Carros.lista):
-            self.rect.y += self.vel
+            self.rect.y += self.vely
+            self.rect.x += self.velx
         else:
             self.destroy(Proyectil)
 
@@ -164,5 +179,3 @@ class Obstaculo (General):
         General.__init__(self, x, y, widt, height, image_string)
         Obstaculo.lista.add()
     
-
-
