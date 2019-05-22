@@ -56,6 +56,7 @@ class Carros(General):
         Carros.lista.add(self)
         self.vel = vel
         self.vida = 15
+        self.direc = 0
 
     def check_collide(self):
         if self.rect.collide_rect(Proyectil.lista):
@@ -78,20 +79,34 @@ class Jugador(Carros):
         keys = pygame.key.get_pressed()
         if keys[pygame.K_LEFT] or keys[pygame.K_a]:
             self.rect.x -= self.vel
+            if self.direc == 0:
+                self.image = pygame.transform.rotate(self.image, 90)
+            elif self.direc == 1:
+                self.image = pygame.transform.rotate(self.image, 180)
+            elif self.direc == 3:
+                self.image = pygame.transform.rotate(self.image, -90)
+            self.direc = 2     
         if keys[pygame.K_RIGHT] or keys[pygame.K_d]:
             self.rect.x += self.vel
+            if self.direc == 0:
+                self.image = pygame.transform.rotate(self.image, -90)
+            elif self.direc == 2:
+                self.image = pygame.transform.rotate(self.image, 180)
+            elif self.direc == 3:
+                self.image = pygame.transform.rotate(self.image, 90)
+            self.direc = 1
         if keys[pygame.K_DOWN] or keys[pygame.K_s]:
             self.rect.y += self.vel
-        if keys[pygame.K_UP] or keys[pygame.K_w]:
-            self.rect.y -= self.vel
-class Jugador_c(Jugador):
+            if self.direc == 0:
+                self.image = pygame.transform.rotate(self.image, 180)
+            elif self.direc == 1:
+                self.image = pygame.transform.rotate(self.image, -90)
+            elif self.direc == 2:
+                self.image = pygame.transform.rotate(self.image, 90)
+            self.direc = 3
+            if keys[pygame.K_UP] or keys[pygame.K_w]:
+                self.rect.y -= self.vel
 
-    def __init__(self, x, y, width, height, image_string, vel):
-        Jugador.__init__(self, x, y, width, height, image_string, vel)
-
-    def move(self):
-        #movimiento a base de mensajes del servidor
-        pass
 
 class Enemigo(Carros):
     lista = pygame.sprite.Group()
@@ -117,8 +132,10 @@ class Enemigo(Carros):
     def move(self, s_width, s_height): #mueve el vehiculo enemigo
         if self.rect.x == s_width or self.rect.x == 0:
             self.velx = -self.velx
+            self.image  = pygame.transform.flip(self.image, True, False) #refleja la imagen en el eje x
         if self.rect.y == s_height or self.rect.y == 0:
             self.vely = -self.vely
+            self.image  = pygame.transform.flip(self.image, False, True)#refleja la imagen en el eje y
         self.rect.x += self.velx
         self.rect.y += self.vely
 
@@ -137,4 +154,15 @@ class Proyectil(General):
             self.rect.y += self.vel
         else:
             self.destroy(Proyectil)
+
+
+class Obstaculo (General):
+
+    lista = pygame.sprite.Group()
+    
+    def __init__(self, x, y, widt, height, image_string):
+        General.__init__(self, x, y, widt, height, image_string)
+        Obstaculo.lista.add()
+    
+
 
