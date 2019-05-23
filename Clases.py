@@ -4,23 +4,32 @@ import math
 
 color_arena= (238, 182, 70)
 class General(pygame.sprite.Sprite): #clase general
+
     allsprites = pygame.sprite.Group()
 
-    def __init__(self, x, y, width, height, image_string): #construye instancia con posicion x, y ancho y alto e imagen
-        pygame.sprite.Sprite.__init__ (self)
+    def __init__(self, x, y, width, height, image_string):
+        pygame.sprite.Sprite.__init__(self)
         General.allsprites.add(self)
         self.carga_imagen = pygame.image.load(image_string)
-        self.image = pygame.transform.scale(self.carga_imagen, (width, height))
-        self.rect = self.image.get_rect ()
-        self.width = width
-        self.height = height
+        self.image = pygame.transform.scale(self.carga_imagen, (width, height)) #escala la imagen a width y height
+        self.rect = self.image.get_rect() #saca el area del objeto
+        self.width = width #ancho
+        self.height = height #alto
         self.rect.centerx = x
         self.rect.centery = y
 
-    def draw(self, surface):  # "dibuja" a los objetos en pantalla
+    def draw(self, surface):
+        """
+        Entrada: self y la superficie en que se desea dibujar
+        Descripcion: dibuja al objeto en pantalla dadas las coordenadas y tamano en __init__()
+        """
         surface.blit(self.image, (self.rect.x - self.rect.width / 2, self.rect.y - self.rect.height))
 
-    def destroy (self, ClassName):  # destruye sprite
+    def destroy (self, ClassName):
+        """
+        Entrada: self y la clase a la que pertenece el objeto
+        Descripcion: Destruye al sprite removiendolo del grupo general y de su clase
+        """
         ClassName.lista.remove (self)
         General.allsprites.remove(self)
         del self
@@ -34,6 +43,11 @@ class Mundo(General):
         self.vel = vel
 
     def move(self):
+        """
+        Entrada: self
+        Descripcion: Mueve el fondo respecto a la superficie indicada en el la funcion draw(). En este caso, sera la pantalla
+        Nota: Se mueve en direccion contraria al jugador para mantener a este en pantalla
+        """
         keys = pygame.key.get_pressed()
         if keys[pygame.K_LEFT] or keys[pygame.K_a]:
             self.rect.x += self.vel
@@ -43,9 +57,6 @@ class Mundo(General):
             self.rect.y += self.vel
         if keys[pygame.K_UP] or keys[pygame.K_w]:
             self.rect.y -= self.vel
-    def draw(self, surface):
-        pygame.draw.rect(surface, color_arena, (0,0,self.width, self.height))
-
 
 
 class Carros(General):
@@ -59,14 +70,31 @@ class Carros(General):
         self.direc = 0
 
     def check_collide(self):
+        """
+        Entrada: self
+        Descripcion: revisa si self ha colisionado con algun objeto y, de ser asi, le rebaja la vida correspondiente a
+        cada tipo de objeto
+        """
         if self.rect.collide_rect(Proyectil.lista):
             self.vida -= 1.5
         elif self.rect.collide_rect(Carros.lista):
             self.vida -= 3
+        elif self.rect.collide_rect(Cactus.lista) or self.rect.collide_rect(Roca.lista):
+            self.vida -= 1
+        elif self.rect.collide_rect(Mina.lista):
+            self.vida -= 5
 
     def check_death(self):
+        """
+        Entrada: self
+        Descripcion: si la vida del carro es 0, lo destruye
+        """
         if self.vida <= 0:
             self.destroy(Carros)
+            return True
+        else:
+            return False
+
 
 class Jugador(Carros):
     lista = pygame.sprite.Group()
@@ -76,6 +104,12 @@ class Jugador(Carros):
         Jugador.lista.add(self)
 
     def move(self):
+        """
+        Entrada: self
+        Descripcion: cambia las coordenadas xy de acuerdo a las pulsaciones de las teclas a w s d
+                    y a la velocidad dada en __init__. Ademas rota la imagen en la direccion de movimiento, tomando
+                    en cuenta la direccion anterior; 1 = derecha, 2 = izquierda, 0 = arriba, 3 = abajo
+        """
         keys = pygame.key.get_pressed()
         if keys[pygame.K_LEFT] or keys[pygame.K_a]:
             self.rect.x -= self.vel
@@ -109,22 +143,27 @@ class Jugador(Carros):
 
 
     def disparar(self):
+        """
+        Entrada: self
+        Descripcion:
+        """
         if self.direc == 0:
             vel_disparo = (0,-self.vel*2)
-            pos == [self.rect.centerx+self.width/2, self.rect.centery+10]
+            pos = [self.rect.centerx+self.width/2, self.rect.centery+10]
         elif self.direc == 1:
             vel_disparo = (self.vel*2,0)
             pos = [self.rect.centerx+self.width+10, self.rect.centery/2]
         elif self.direc == 2:
             vel_disparo = (-self.vel*2,0)
-            pos = [self.centerx-10, self.rect.centery/2]
+            pos = [self.rect.centerx-10, self.rect.centery/2]
         else:
             vel_disparo = (0,self.vel*2)
-            pos = [self.rect.centerx+self.widt/2, self.rect.centery+self.heigt+10]
-        return Proyectil(pos[0], pos[1], 50, 50, vel_disparo)
+            pos = [self.rect.centerx+self.width/2, self.rect.centery+self.height+10]
+        return Proyectil(pos[0], pos[1], 50, 50, "Data/Images/shoot.png", vel_disparo[0], vel_disparo[1])
         
 
 class Enemigo(Carros):
+
     lista = pygame.sprite.Group()
 
     def __init__(self, x, y, width, height, image_string, vel):
@@ -160,7 +199,7 @@ class Proyectil(General):
 
     lista = pygame.sprite.Group()
 
-    def __init__(self, x, y, width, height, image_string, (velx, vely)):
+    def __init__(self, x, y, width, height, image_string, velx, vely):
         General.__init__ (self, x, y, width, height, image_string)
         Proyectil.lista.add()
         self.velx = velx
@@ -178,8 +217,36 @@ class Obstaculo (General):
 
     lista = pygame.sprite.Group()
     
-    def __init__(self, x, y, widt, height, image_string):
-        General.__init__(self, x, y, widt, height, image_string)
+    def __init__(self, x, y, width, height, image_string):
+        General.__init__(self, x, y, width, height, image_string)
         Obstaculo.lista.add()
+
+
+class Mina(Obstaculo):
+
+    lista = pygame.sprite.Group()
+
+    def __init__(self, x, y, width=25, height=25, image_string='Data/Images/mine.png'):
+        Obstaculo.__init__(self, x, y, width, height, image_string)
+        Mina.lista.add()
+
+
+class Cactus(Obstaculo):
+
+    lista = pygame.sprite.Group()
+
+    def __init__(self, x, y, width = 50, height = 50, image_string = 'Data/Images/cactus.png'):
+        Obstaculo.__init__(self, x, y, width, height, image_string)
+        Cactus.lista.add()
+
+
+class Roca (Obstaculo):
+    lista = pygame.sprite.Group ()
+
+    def __init__(self, x, y, width=50, height=50, image_string='Data/Images/cactus.png'):
+        Obstaculo.__init__(self, x, y, width, height, image_string)
+        Roca.lista.add()
+
+
     
     
