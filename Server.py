@@ -7,7 +7,7 @@ screen_size = [1280, 720]
 #map_size = [screen_size[0]*10, screen_size[1]*10]
 
 win = pygame.display.set_mode((screen_size[0], screen_size[1]))
-
+fondo_menu =
 """"
 #PARAMETROS POR DEFECTO
 ip = "0.0.0.0"
@@ -32,7 +32,7 @@ pausa = False #variable que
 juego = False
 nivel = 1
 
-def menu():
+def main_menu():
 
 
 
