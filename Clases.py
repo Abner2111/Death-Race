@@ -174,7 +174,7 @@ class Enemigo(Carros):
 
     lista = pygame.sprite.Group()
 
-    def __init__(self, x, y, width, height,vel, image_string="Data/Images/"):
+    def __init__(self, x, y, width, height,vel, image_string="Data/Images/Audi.png"):
         Carros.__init__(self, x, y, width, height, image_string, vel)
         Enemigo.lista.add(self)
         self.velx = 0
@@ -277,9 +277,10 @@ class Misc:
         posiciones = []
         cont = 0
         while cont <= cant:
-            x = random.randint(width)
-            y = random.randint(height)
+            x = random.randint(0,width)
+            y = random.randint(0,height)
             posiciones.append([width, height])
+            cont+=1
         return posiciones
     def componentes_velocidad(self, vel): #toma la velocidad definida y la dirige a una direccion aleatoria, descomponiendo la velocidad en componentes
         radianes = random.randrange(0, 2*math.pi, 0.02) #genera un numero aleatorio de radianes entre 0 y 2*pi, con un intervalo de 0. 2(approx. un grado)
