@@ -41,13 +41,13 @@ Boton_salir =  fuente3.render('salir del juego', True, color_botones)
 misc = Clases.Misc()
 nivel = 1
 tamano_mapa = [screen_size[0]*10, screen_size[1]*10]
-velocidad = nivel**2+4
-enemigos = misc.generar_Enemigos(tamano_mapa[0], tamano_mapa[1], 100, 100, nivel**3+29, velocidad)
-jugador = Clases.Jugador(0, tamano_mapa[1]-100, 100, 100, "Data/Images/Audi.png", velocidad)
+velocidad = nivel**2+4 #velocidad en funcion del nivel
+enemigos = misc.generar_Enemigos(tamano_mapa[0], tamano_mapa[1], 100, 100, nivel**3+29, velocidad)#cantidad de enemigos en funcion del nivel
+jugador = Clases.Jugador(0,0, 100, 100, "Data/Images/cactus.png", velocidad)
 mapa = Clases.Mundo(0,-(tamano_mapa[1]+screen_size[1]), tamano_mapa[0], tamano_mapa[1], velocidad)
 
 def main_menu():
-    global Boton_fama, Boton_guardada, Boton_info, Boton_iniciar, Boton_salir, game, menu
+    global Boton_fama, Boton_guardada, Boton_info, Boton_iniciar, Boton_salir, game, menu, run
     win.blit(background_menu,(0,0))
     win.blit(titulo,(0,20))
     win.blit(Boton_iniciar,(50, 270))
@@ -58,45 +58,52 @@ def main_menu():
 
     mouse = pygame.mouse.get_pos()
     click = pygame.mouse.get_pressed()
-    print(mouse)
     if 50 < mouse[0] < 470 and 270 < mouse[1] < 330:
-        if click:
-            game = True
+        if click[0]:
+            pygame.time.delay(50)
             menu = False
-        Boton_iniciar = fuente2.render("iniciar partida",True, (255,255,255))
+            game = True
+
+        else:
+            Boton_iniciar = fuente2.render('iniciar partida',True, (255,255,255))
     else:
-        Boton_iniciar = fuente2.render('iniciar partida', True, color_botones)
+        Boton_iniciar = fuente2.render ('iniciar partida', True, color_botones)
 
     if 50 < mouse[0] < 372 and 350 < mouse[1] < 390:
-        if click:
+        if click[0]:
             pass
-        Boton_guardada = fuente3.render('partida guardada', True, (255,255,255))
+        else:
+            Boton_guardada = fuente3.render('partida guardada', True, (255,255,255))
     else:
         Boton_guardada = fuente3.render('partida guardada', True, color_botones)
 
-    if 50 < mouse[0] < 345 and 340 < mouse[1] < 440:
-        if click:
+    if 50 < mouse[0] < 345 and 400 < mouse[1] < 440:
+        if click[0]:
             pass
-        Boton_fama = fuente3.render('salon de la fama', True, (255,255,255))
+        else:
+            Boton_fama = fuente3.render('salon de la fama', True, (255,255,255))
     else:
         Boton_fama = fuente3.render('salon de la fama', True, color_botones)
     
-    if 50 < mouse[0] < 320 and 620< mouse[1] < 660:
-        if click:
+    if 50 < mouse[0] < 320 and 570< mouse[1] < 610:
+        if click[0]:
             pass
-        Boton_info = fuente3.render('info de desarrolladores', True, (255,255,255))
+        else:
+            Boton_info = fuente3.render('info de desarrolladores', True, (255,255,255))
     else:
         Boton_info = fuente3.render('info de desarrolladores', True, color_botones)
 
     if 50 < mouse[0] < 320 and 620< mouse[1] < 660:
-        if click:
-            pass
-        Boton_salir =  fuente3.render('salir del juego', True, (255,255,255))
+        if click[0]:
+            run = False
+        else:
+            Boton_salir =  fuente3.render('salir del juego', True, (255,255,255))
     else:
         Boton_salir =  fuente3.render('salir del juego', True, color_botones)
 
 
-def game_process(nivel):
+def game_process(level):
+    '''global nivel
     mapa.move()
     jugador.move(tamano_mapa[0], tamano_mapa[1])
     jugador.check_collide()
@@ -105,15 +112,16 @@ def game_process(nivel):
         sprites.check_collide()
         sprites.check_death()
     for sprites in Clases.Proyectil.lista.sprites():
-        sprites.check_collide(Carros)
+        sprites.check_collide()
         sprites.move(tamano_mapa[0], tamano_mapa[1])
     mapa.draw(win)
     jugador.draw(mapa.image)
     for sprites in enemigos:
-        sprites.move(tamano_mapa[0], tamano_mapa[1])
+        sprites.move(tamano_mapa[0], tamano_mapa[1])'''
+    mapa.draw(win)
+    jugador.draw(mapa.image)
 
-
-
+#Ciclo principal del juego
 while run:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -124,7 +132,7 @@ while run:
 
     if game:
         game_process(nivel)
-        
+
     pygame.display.update()
 
 pygame.quit()

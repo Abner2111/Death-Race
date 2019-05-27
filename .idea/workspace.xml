@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3dddcfc7-616c-42bc-8017-31321a196fbd" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/Clases.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clases.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Audi.png" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Images/Audi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Black_viper.png" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Images/Black_viper.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/mine.png" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Images/mine.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/rock.png" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Images/rock.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/shoot.png" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Images/shoot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/speed_boost.png" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Images/speed_boost.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server.py" beforeDir="false" afterPath="$PROJECT_DIR$/Server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cliente.py" beforeDir="false" afterPath="$PROJECT_DIR$/cliente.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first class diagram.uml" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Death_Race$cliente.coverage" NAME="cliente Coverage Results" MODIFIED="1558929382875" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Server.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Server.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="460">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cliente.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cliente.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Clases.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Clases.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Python/#C:/Users/abner/Desktop/Proyecto 2/Death-Race/Clases.py" pinned="false" current-in-tab="true">
+        <entry file="uml://Python/#C:/Users/abner/Desktop/Proyecto 2/Death-Race/Clases.py">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>Python</ID>
+              <OriginalElement>#C:/Users/abner/Desktop/Proyecto 2/Death-Race/Clases.py</OriginalElement>
+              <nodes>
+                <node x="1536.5" y="1424.0">Clases.Mina</node>
+                <node x="1027.5" y="1424.0">Clases.Cactus</node>
+                <node x="1207.625" y="0.0">object</node>
+                <node x="1871.5320512820513" y="1167.0">Clases.Mundo</node>
+                <node x="237.5" y="1358.0">Clases.Enemigo</node>
+                <node x="2020.5" y="1424.0">Clases.Roca</node>
+                <node x="1273.125" y="598.5">Clases.Misc</node>
+                <node x="502.9999999999999" y="1145.0">Clases.Carros</node>
+                <node x="1009.1249999999999" y="866.0">Clases.General</node>
+                <node x="1051.125" y="543.0">pygame.sprite.Sprite</node>
+                <node x="0.0" y="1156.0">Clases.Proyectil</node>
+                <node x="700.4999999999999" y="1369.0">Clases.Jugador</node>
+                <node x="1565.5320512820513" y="1189.0">Clases.Obstaculo</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="Clases.Cactus" target="Clases.Obstaculo">
+                  <point x="0.0" y="-37.5" />
+                  <point x="1272.0" y="1333.0" />
+                  <point x="1613.198717948718" y="1333.0" />
+                  <point x="-95.33333333333326" y="37.5" />
+                </edge>
+                <edge source="Clases.Carros" target="Clases.General">
+                  <point x="0.0" y="-81.5" />
+                  <point x="656.4999999999999" y="1125.0" />
+                  <point x="1116.375" y="1125.0" />
+                  <point x="-35.75" y="114.5" />
+                </edge>
+                <edge source="Clases.Misc" target="object">
+                  <point x="0.0" y="-81.0" />
+                  <point x="1508.125" y="518.0" />
+                  <point x="1391.375" y="518.0" />
+                  <point x="61.25" y="246.5" />
+                </edge>
+                <edge source="Clases.Mina" target="Clases.Obstaculo">
+                  <point x="0.0" y="-37.5" />
+                  <point x="1768.5" y="1333.0" />
+                  <point x="1708.5320512820513" y="1333.0" />
+                  <point x="0.0" y="37.5" />
+                </edge>
+                <edge source="pygame.sprite.Sprite" target="object">
+                  <point x="0.0" y="-136.5" />
+                  <point x="1152.125" y="518.0" />
+                  <point x="1268.875" y="518.0" />
+                  <point x="-61.25" y="246.5" />
+                </edge>
+                <edge source="Clases.Proyectil" target="Clases.General">
+                  <point x="0.0" y="-70.5" />
+                  <point x="241.5" y="1115.0" />
+                  <point x="1044.875" y="1115.0" />
+                  <point x="-107.25" y="114.5" />
+                </edge>
+                <edge source="Clases.Obstaculo" target="Clases.General">
+                  <point x="0.0" y="-37.5" />
+                  <point x="1708.5320512820513" y="1125.0" />
+                  <point x="1187.875" y="1125.0" />
+                  <point x="35.75" y="114.5" />
+                </edge>
+                <edge source="Clases.Mundo" target="Clases.General">
+                  <point x="0.0" y="-59.5" />
+                  <point x="2095.5320512820513" y="1115.0" />
+                  <point x="1259.375" y="1115.0" />
+                  <point x="107.25" y="114.5" />
+                </edge>
+                <edge source="Clases.Enemigo" target="Clases.Carros">
+                  <point x="0.0" y="-103.5" />
+                  <point x="459.0" y="1333.0" />
+                  <point x="579.7499999999999" y="1333.0" />
+                  <point x="-76.75" y="81.5" />
+                </edge>
+                <edge source="Clases.Jugador" target="Clases.Carros">
+                  <point x="0.0" y="-92.5" />
+                  <point x="853.9999999999999" y="1333.0" />
+                  <point x="733.2499999999999" y="1333.0" />
+                  <point x="76.75" y="81.5" />
+                </edge>
+                <edge source="Clases.Roca" target="Clases.Obstaculo">
+                  <point x="0.0" y="-37.5" />
+                  <point x="2255.5" y="1333.0" />
+                  <point x="1803.8653846153845" y="1333.0" />
+                  <point x="95.33333333333326" y="37.5" />
+                </edge>
+                <edge source="Clases.General" target="pygame.sprite.Sprite">
+                  <point x="0.0" y="-114.5" />
+                  <point x="0.0" y="136.5" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="1.0" x="330.0" y="175.0" />
+              <SelectedNodes />
+              <Categories>
+                <Category>Inner Classes</Category>
+                <Category>Fields</Category>
+                <Category>Methods</Category>
+              </Categories>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Game.py" />
+        <option value="$PROJECT_DIR$/Misc..py" />
+        <option value="$PROJECT_DIR$/Server.py" />
+        <option value="$PROJECT_DIR$/cliente.py" />
+        <option value="$PROJECT_DIR$/Clases.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="966" />
+    <option name="y" value="-9" />
+    <option name="width" value="979" />
+    <option name="height" value="1038" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Death-Race" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Death-Race" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Death-Race" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Death-Race" type="462c0819:PsiDirectoryNode" />
+              <item name="Data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Death-Race" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Death-Race" type="462c0819:PsiDirectoryNode" />
+              <item name="Data" type="462c0819:PsiDirectoryNode" />
+              <item name="Fonts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Death-Race" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Death-Race" type="462c0819:PsiDirectoryNode" />
+              <item name="Data" type="462c0819:PsiDirectoryNode" />
+              <item name="Images" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Clases.png" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="cliente" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Death-Race" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cliente.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.cliente" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3dddcfc7-616c-42bc-8017-31321a196fbd" name="Default" comment="" />
+      <created>1558141214532</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1558141214532</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Python Console" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.0" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.115885414" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997175" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Clases.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="11" lean-forward="true" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Clases.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2960">
+          <caret line="148" column="11" lean-forward="true" selection-start-line="148" selection-start-column="11" selection-end-line="148" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game.py" />
+    <entry file="uml://Python/Clases.General">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>Python</ID>
+          <OriginalElement>Clases.General</OriginalElement>
+          <nodes>
+            <node x="0.0" y="864.0">Clases.General</node>
+            <node x="20.5" y="0.0">object</node>
+            <node x="42.0" y="542.0">pygame.sprite.Sprite</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="pygame.sprite.Sprite" target="object">
+              <point x="0.0" y="-136.0" />
+              <point x="0.0" y="246.0" />
+            </edge>
+            <edge source="Clases.General" target="pygame.sprite.Sprite">
+              <point x="0.0" y="-114.0" />
+              <point x="0.0" y="136.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.40000000000000013" x="-568.0" y="667.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Methods</Category>
+            <Category>Inner Classes</Category>
+            <Category>Fields</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/first class diagram.uml">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>Python</ID>
+          <OriginalElement>#C:/Users/abner/Desktop/Proyecto 2/Death-Race/Clases.py</OriginalElement>
+          <nodes>
+            <node x="" y="">pygame.sprite.Sprite</node>
+            <node x="" y="">Clases.Obstaculo</node>
+            <node x="" y="">Clases.Carros</node>
+            <node x="" y="">Clases.Mundo</node>
+            <node x="" y="">Clases.Proyectil</node>
+            <node x="" y="">Clases.Enemigo</node>
+            <node x="" y="">Clases.Jugador</node>
+            <node x="" y="">object</node>
+            <node x="" y="">Clases.General</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.40574282147315854" x="698.0" y="836.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Methods</Category>
+            <Category>Inner Classes</Category>
+            <Category>Fields</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Misc..py" />
+    <entry file="file://$PROJECT_DIR$/Server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cliente.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://Python/#C:/Users/abner/AppData/Local/Programs/Python/Python36-32/Lib/json/__init__.py">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>Python</ID>
+          <OriginalElement>#C:/Users/abner/AppData/Local/Programs/Python/Python36-32/Lib/json/__init__.py</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="679.0" y="326.0" />
+          <SelectedNodes />
+          <Categories />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Clases.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://Python/#C:/Users/abner/Desktop/Proyecto 2/Death-Race/Clases.py">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>Python</ID>
+          <OriginalElement>#C:/Users/abner/Desktop/Proyecto 2/Death-Race/Clases.py</OriginalElement>
+          <nodes>
+            <node x="1536.5" y="1424.0">Clases.Mina</node>
+            <node x="1027.5" y="1424.0">Clases.Cactus</node>
+            <node x="1207.625" y="0.0">object</node>
+            <node x="1871.5320512820513" y="1167.0">Clases.Mundo</node>
+            <node x="237.5" y="1358.0">Clases.Enemigo</node>
+            <node x="2020.5" y="1424.0">Clases.Roca</node>
+            <node x="1273.125" y="598.5">Clases.Misc</node>
+            <node x="502.9999999999999" y="1145.0">Clases.Carros</node>
+            <node x="1009.1249999999999" y="866.0">Clases.General</node>
+            <node x="1051.125" y="543.0">pygame.sprite.Sprite</node>
+            <node x="0.0" y="1156.0">Clases.Proyectil</node>
+            <node x="700.4999999999999" y="1369.0">Clases.Jugador</node>
+            <node x="1565.5320512820513" y="1189.0">Clases.Obstaculo</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="Clases.Cactus" target="Clases.Obstaculo">
+              <point x="0.0" y="-37.5" />
+              <point x="1272.0" y="1333.0" />
+              <point x="1613.198717948718" y="1333.0" />
+              <point x="-95.33333333333326" y="37.5" />
+            </edge>
+            <edge source="Clases.Carros" target="Clases.General">
+              <point x="0.0" y="-81.5" />
+              <point x="656.4999999999999" y="1125.0" />
+              <point x="1116.375" y="1125.0" />
+              <point x="-35.75" y="114.5" />
+            </edge>
+            <edge source="Clases.Misc" target="object">
+              <point x="0.0" y="-81.0" />
+              <point x="1508.125" y="518.0" />
+              <point x="1391.375" y="518.0" />
+              <point x="61.25" y="246.5" />
+            </edge>
+            <edge source="Clases.Mina" target="Clases.Obstaculo">
+              <point x="0.0" y="-37.5" />
+              <point x="1768.5" y="1333.0" />
+              <point x="1708.5320512820513" y="1333.0" />
+              <point x="0.0" y="37.5" />
+            </edge>
+            <edge source="pygame.sprite.Sprite" target="object">
+              <point x="0.0" y="-136.5" />
+              <point x="1152.125" y="518.0" />
+              <point x="1268.875" y="518.0" />
+              <point x="-61.25" y="246.5" />
+            </edge>
+            <edge source="Clases.Proyectil" target="Clases.General">
+              <point x="0.0" y="-70.5" />
+              <point x="241.5" y="1115.0" />
+              <point x="1044.875" y="1115.0" />
+              <point x="-107.25" y="114.5" />
+            </edge>
+            <edge source="Clases.Obstaculo" target="Clases.General">
+              <point x="0.0" y="-37.5" />
+              <point x="1708.5320512820513" y="1125.0" />
+              <point x="1187.875" y="1125.0" />
+              <point x="35.75" y="114.5" />
+            </edge>
+            <edge source="Clases.Mundo" target="Clases.General">
+              <point x="0.0" y="-59.5" />
+              <point x="2095.5320512820513" y="1115.0" />
+              <point x="1259.375" y="1115.0" />
+              <point x="107.25" y="114.5" />
+            </edge>
+            <edge source="Clases.Enemigo" target="Clases.Carros">
+              <point x="0.0" y="-103.5" />
+              <point x="459.0" y="1333.0" />
+              <point x="579.7499999999999" y="1333.0" />
+              <point x="-76.75" y="81.5" />
+            </edge>
+            <edge source="Clases.Jugador" target="Clases.Carros">
+              <point x="0.0" y="-92.5" />
+              <point x="853.9999999999999" y="1333.0" />
+              <point x="733.2499999999999" y="1333.0" />
+              <point x="76.75" y="81.5" />
+            </edge>
+            <edge source="Clases.Roca" target="Clases.Obstaculo">
+              <point x="0.0" y="-37.5" />
+              <point x="2255.5" y="1333.0" />
+              <point x="1803.8653846153845" y="1333.0" />
+              <point x="95.33333333333326" y="37.5" />
+            </edge>
+            <edge source="Clases.General" target="pygame.sprite.Sprite">
+              <point x="0.0" y="-114.5" />
+              <point x="0.0" y="136.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="330.0" y="175.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Inner Classes</Category>
+            <Category>Fields</Category>
+            <Category>Methods</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -3,6 +3,7 @@ import random
 import math
 import json
 color_arena= (238, 182, 70)
+
 class General(pygame.sprite.Sprite): #clase general
 
     allsprites = pygame.sprite.Group()
@@ -23,7 +24,7 @@ class General(pygame.sprite.Sprite): #clase general
         Entrada: self y la superficie en que se desea dibujar
         Descripcion: dibuja al objeto en pantalla dadas las coordenadas y tamano en __init__()
         """
-        surface.blit(self.image, (self.rect.x - self.rect.width / 2, self.rect.y - self.rect.height))
+        surface.blit(self.image, (self.rect.x - self.rect.width / 2, self.rect.y - self.rect.height/2))
 
     def destroy (self, ClassName):
         """
@@ -38,8 +39,8 @@ class General(pygame.sprite.Sprite): #clase general
 class Mundo(General):
     lista = pygame.sprite.Group()
 
-    def __init__(self, x, y, width, height,  vel):
-        General.__init__(self, x, y, width, height, image_string='Data/Images/sand.jpg')
+    def __init__(self, x, y, width, height,  vel, image_string = 'Data/Images/sand.jpg'):
+        General.__init__(self, x, y, width, height, image_string)
         self.vel = vel
 
     def move(self):
@@ -67,7 +68,7 @@ class Carros(General):
         Carros.lista.add(self)
         self.vel = vel
         self.vida = 15
-        self.direc = 0
+        self.direc = 0 #direccion del carro: 0 es arriba, 1 es derecha, 2 es izquierda y 3 es abajo
 
 
 

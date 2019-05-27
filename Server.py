@@ -33,7 +33,4 @@ juego = False
 nivel = 1
 
 def main_menu():
-
-
-
-
+    pass
