@@ -141,13 +141,14 @@ class Jugador(Carros):
         Descripcion: revisa si self ha colisionado con algun objeto y, de ser asi, le rebaja la vida correspondiente a
         cada tipo de objeto
         """
-        if self.rect.collide_rect(Proyectil.lista):
+        if  Misc.colisiona(self, Proyectil):
             self.vida -= 1.5
-        elif self.rect.collide_rect(Enemigo.lista):
+        elif  Misc.colisiona(self, Enemigo):
             self.vida -= 3
-        elif self.rect.collide_rect(Cactus.lista) or self.rect.collide_rect(Roca.lista):
+    
+        elif  Misc.colisiona(self, Cactus) or Misc.colisiona(self, Roca):
             self.vida -= 1
-        elif self.rect.collide_rect(Mina.lista):
+        elif  Misc.colisiona(self, Mina):
             self.vida -= 5
     def disparar(self):
         """
@@ -187,13 +188,13 @@ class Enemigo(Carros):
         Descripcion: revisa si self ha colisionado con algun objeto y, de ser asi, le rebaja la vida correspondiente a
         cada tipo de objeto
         """
-        if self.rect.collide_rect(Proyectil.lista):
+        if  Misc.colisiona(self, Proyectil):
             self.vida -= 1.5
-        elif self.rect.collide_rect(Jugador.lista):
-            self.vida -= 2
-        elif self.rect.collide_rect(Cactus.lista) or self.rect.collide_rect(Roca.lista):
+        elif  Misc.colisiona(self, Jugador):
+            self.vida -= 3
+        elif  Misc.colisiona(self, Cactus) or Misc.colisiona(self, Roca):
             self.vida -= 1
-        elif self.rect.collide_rect(Mina.lista):
+        elif  Misc.colisiona(self, Mina):
             self.vida -= 5
 
     def componentes_velocidad(self): #toma la velocidad definida y la dirige a una direccion aleatoria, descomponiendo la velocidad en componentes
@@ -225,7 +226,7 @@ class Proyectil(General):
         self.vely = vely
 
     def move(self, width, height):
-        if not self.rect.collide_rect(Carros.lista) and 0<self.rect.centerx<width and 0<self.rect.centery<height:
+        if not  Misc.colisiona(self, Carros) and 0<self.rect.centerx<width and 0<self.rect.centery<height:
             self.rect.y += self.vely
             self.rect.x += self.velx
         else:
@@ -298,3 +299,14 @@ class Misc:
     def save_to_json(self, name1, name2, data):
         file = open('Data/Datastore/'+name1+'_'+name2+'.json', 'w+')
         json.dump(data, file)
+    @staticmethod
+    def colisiona(Sprite, Clase):
+        col = False
+        for sprite in Clase.lista.sprites():
+            if Sprite.rect.colliderect(sprite.rect):
+                col = True
+                break
+        if col:
+            return True
+        else:
+            return False
